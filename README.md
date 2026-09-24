@@ -1,10 +1,10 @@
 # rpcprobe
 
-[![ci](https://github.com/alinaschanz/rpcprobe/actions/workflows/ci.yml/badge.svg)](https://github.com/alinaschanz/rpcprobe/actions/workflows/ci.yml)
+[![ci](https://github.com/AlinaSchan/rpcprobe/actions/workflows/ci.yml/badge.svg)](https://github.com/AlinaSchan/rpcprobe/actions/workflows/ci.yml)
 ![python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776ab)
 ![license mit](https://img.shields.io/badge/license-MIT-2b7a74)
-[![release](https://img.shields.io/github/v/release/alinaschanz/rpcprobe?color=2b7a74)](https://github.com/alinaschanz/rpcprobe/releases)
-[![openssf scorecard](https://api.scorecard.dev/projects/github.com/alinaschanz/rpcprobe/badge)](https://scorecard.dev/viewer/?uri=github.com/alinaschanz/rpcprobe)
+[![release](https://img.shields.io/github/v/release/AlinaSchan/rpcprobe?color=2b7a74)](https://github.com/AlinaSchan/rpcprobe/releases)
+[![openssf scorecard](https://api.scorecard.dev/projects/github.com/AlinaSchan/rpcprobe/badge)](https://scorecard.dev/viewer/?uri=github.com/AlinaSchan/rpcprobe)
 
 which public ethereum rpcs answer today, and what they let you do. every endpoint that is listed
 somewhere as "no key needed" gets the same dozen small json-rpc requests: the chain id, five pings,
@@ -56,7 +56,7 @@ account now; cloudflare's and llamarpc's endpoints, still in a lot of tutorials,
 ## install
 
 ```
-pipx install git+https://github.com/alinaschanz/rpcprobe
+pipx install git+https://github.com/AlinaSchan/rpcprobe
 ```
 
 or clone it and run `python -m rpcprobe` from the folder. python 3.10 or newer, no dependencies.
@@ -82,8 +82,8 @@ rpcprobe --summary-append data/daily.csv --quiet   # one row per endpoint per da
 | logs | `eth_getLogs` for the uniswap v3 factory's `PoolCreated`, 10 / 50 / 100 / 1,000 / 10,000 blocks | the event is rare, so a refusal is about the width of the range, never about the number of results |
 | archive | `eth_getBalance` of an address at block 1,000,000 | only an archive node still has that state |
 | batch | two calls in one request | fewer round trips for anything that reads many blocks |
-| receipts | `eth_getBlockReceipts` for one recent block | every receipt of a block in one call: [blobwatch](https://github.com/alinaschanz/blobwatch) `--receipts` lives on it |
-| fee hist | `eth_feeHistory` for 1,024 blocks, how many came back | [gasweek](https://github.com/alinaschanz/gasweek) pages through a week this way |
+| receipts | `eth_getBlockReceipts` for one recent block | every receipt of a block in one call: [blobwatch](https://github.com/AlinaSchan/blobwatch) `--receipts` lives on it |
+| fee hist | `eth_feeHistory` for 1,024 blocks, how many came back | [gasweek](https://github.com/AlinaSchan/gasweek) pages through a week this way |
 | blob fee | `eth_blobBaseFee` | the fee for blob space, eip-4844 |
 | eth_config | `eth_config`, eip-7910 | the fork parameters, blob target and max included, straight from the node |
 | browser | `access-control-allow-origin` on the first answer | whether a web page may use the endpoint at all |
@@ -116,8 +116,8 @@ script that reads history.
 
 ## see also
 
-- [blobwatch](https://github.com/alinaschanz/blobwatch), [gasweek](https://github.com/alinaschanz/gasweek),
-  [bigmoves](https://github.com/alinaschanz/bigmoves): the scripts that live on these endpoints
+- [blobwatch](https://github.com/AlinaSchan/blobwatch), [gasweek](https://github.com/AlinaSchan/gasweek),
+  [bigmoves](https://github.com/AlinaSchan/bigmoves): the scripts that live on these endpoints
 - the notes: [alinaschanz.life](https://alinaschanz.life), the short version on [x](https://x.com/alinaschanz)
 
 ## verify a release
@@ -127,7 +127,7 @@ file, and a build provenance attestation made in github's own signing flow. with
 into one folder:
 
     sha256sum -c SHA256SUMS
-    gh attestation verify ./*.whl --owner alinaschanz
+    gh attestation verify ./*.whl --owner AlinaSchan
     ots verify SHA256SUMS.ots
 
 the commit itself is [signed](https://alinaschanz.life/verify/#commits).

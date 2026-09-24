@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from typing import NamedTuple
 
-USER_AGENT = "rpcprobe/0.1 (+https://github.com/alinaschanz/rpcprobe)"
+USER_AGENT = "rpcprobe/0.1 (+https://github.com/AlinaSchan/rpcprobe)"
 ORIGIN = "https://example.org"  # sent once, to see whether a browser page would be allowed to read the answer
 
 # the uniswap v3 factory and its PoolCreated event: a handful of logs a day, so a wide range is
